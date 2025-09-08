@@ -1,0 +1,67 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "rahul",
+    "password": "r",
+    "email": "rahul@gmail.com",
+    "name": "rahul"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "yash@gmail.com",
+    "password": "y"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "rahul@gmail.com",
+    "password": "r"
+}
+
+###
+
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token" : "6be476d9871180d3a04d32352d3c2e570179c1dfe2e1f6c6d825271410ce1e71"
+}
+
+###
+
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+    "token" : "4206ce2f46cd678b098df7e2110585ceb3b1843d6cfb8540f245daab75062618",
+    "bio": "",
+    "currentPost": "CTO",
+    "pastWork": [
+        {
+            "company": "Microsoft",
+            "position": "CTO",
+            "years": "2+"
+        }
+    ],
+    "education": [
+        {
+            "school": "IIT",
+            "degree": "B.Tech",
+            "fieldOfStudy": "2018-2022"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:9090/user/get_all_users
